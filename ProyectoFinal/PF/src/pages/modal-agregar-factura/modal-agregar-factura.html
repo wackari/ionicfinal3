@@ -1,0 +1,54 @@
+<!--
+  Generated template for the ModalAgregarFacturaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Agregar Factura</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label>Suplidores:</ion-label>
+        <ion-select [(ngModel)]="suplidor">
+          <ion-option *ngFor="let suplidores of suplidores" [value]="suplidores">{{suplidores.Nombre}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+          <ion-label>Numero de factura:</ion-label>
+          <ion-input type="text" placeholder="Numero de Factura" [(ngModel)]="factura"></ion-input>
+        </ion-item>
+          <ion-item>
+              <ion-label>Cocepto:</ion-label>
+              <ion-input type="text" placeholder="Numero de Factura" [(ngModel)]="concepto"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Itbis:</ion-label>
+              <ion-input type="number" placeholder="Numero de Factura" [(ngModel)]="itebis"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Total:</ion-label>
+              <ion-input type="number" placeholder="Numero de Factura" [(ngModel)]="total"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Fecha</ion-label>
+              <ion-datetime displayFormat="MM/DD/YYYY" pickerFormat="MM/DD/YYYY" [(ngModel)]="fecha"></ion-datetime>
+          </ion-item>
+          <ion-item>
+              <img [src]="foto" *ngIf="foto" />
+              <button ion-button icon-left full type="button" (tap)="sacarFoto()">
+                Foto&nbsp;&nbsp;
+                <ion-icon name="camera"></ion-icon>
+              </button>
+            </ion-item>
+
+            <button ion-button (click)="Guardar()" block>Agregar Factura </button> 
+            <button ion-button (click)="cerrarModal()" color="danger" block>Cerrar </button> 
+</ion-content>
