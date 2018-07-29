@@ -64,24 +64,7 @@ Guardar(){
     this.cerrarModal();
 })
 }
-    let cameraOptions : CameraOptions = {
-        quality: 50,
-        encodingType: this.camera.EncodingType.JPEG,
-        targetWidth: 800,
-        targetHeight: 600,
-        destinationType: this.camera.DestinationType.DATA_URL,
-        sourceType: this.camera.PictureSourceType.CAMERA,
-        correctOrientation: true
-    }
-
-
-    this.camera.getPicture(cameraOptions).then((imageData) => {
-      // imageData is a base64 encoded string
-        this.foto = "data:image/jpeg;base64," + imageData;
-    }, (err) => {
-        console.log(err);
-    });
-  }
+    
 
 
 }

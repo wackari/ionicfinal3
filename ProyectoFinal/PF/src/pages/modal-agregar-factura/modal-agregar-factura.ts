@@ -80,6 +80,7 @@ Guardar()
     suplidor: this.suplidor,
     foto: "demo",
     factura: this.factura,
+    nfc: this.nfc,
     fecha: this.fecha,
     itebis: this.itebis,
     concepto: this.concepto,

@@ -15,7 +15,6 @@
 
 <ion-content padding>
     <ion-card>
-
         <ion-avatar item-start>
             <img src="assets/imgs/av.jpg">
              <!-- <img [src]="factura.foto" *ngIf="factura.foto" />-->
@@ -23,7 +22,7 @@
         <ion-card-content>
            <ion-item text-wrap>
               <h2>Concepto: {{ factura.concepto }}</h2>
-               <p>Suplidor: {{ factura.suplidor.Nombre }}, NFC: {{ factura.suplidor.NFC }} </p>
+               <p>Suplidor: {{ factura.suplidor.Nombre }}, RNC: {{ factura.suplidor.RNC }}, NFC: {{ factura.nfc }}</p>
                <p>Monto: {{ factura.total }}, Impuesto: {{ factura.itebis }} </p>
             </ion-item>
         </ion-card-content> 
